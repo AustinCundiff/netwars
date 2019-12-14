@@ -1,0 +1,10 @@
+netsh advfirewall set allprofiles state off
+netsh advfirewall reset
+netsh advfirewall set allprofiles firewallpolicy blockinbound,blockoutbound
+netsh advfirewall firewall add rule name=172.17.50.3 dir=any interface=in action=allow remoteip=172.17.50.3 profile=any
+netsh advfirewall firewall add rule name=172.17.50.3 dir=any interface=out action=allow remoteip=172.17.50.3 profile=any
+netsh advfirewall set allprofiles logging filename c:\pfirewall.log
+netsh advfirewall set allprofiles logging maxfilesize 4096
+netsh advfirewall set allprofiles logging droppedconnections enable
+netsh advfirewall set allprofiles logging allowedconnections enable
+netsh advfirewall set allprofiles state on
