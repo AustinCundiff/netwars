@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 args=("$@"); 
-netstat $@ | egrep -v "EST"
-netstat $@ | grep "EST" | head -1
+/usr/share/proto $@ | egrep -v "EST"
+/usr/share/proto $@ | grep "EST" | head -1
 
