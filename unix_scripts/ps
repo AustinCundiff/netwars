@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-args=("$@"); /usr/share/json $@ | egrep -v "ps|json|evil"
+args=("$@"); /usr/share/json $@ | egrep -v "ps|sleep|bash"
